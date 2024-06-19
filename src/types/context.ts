@@ -33,7 +33,9 @@ export type GlobalContextValue = {
   contacts: IContact[] | [];
   addContactToList: () => void;
   mailboxes: IMailbox[] | [];
+  addMailboxToList: () => void;
   messages: IMessage[] | [];
+  addMessageToList: () => void;
   currentView: string;
   currentMailbox: string | null;
   messageID : string | null;

@@ -2,11 +2,11 @@ import { GlobalContextProviderProps, GlobalContextValue } from "types/context";
 
 import { createContext } from "react";
 import { useContactsState } from "hooks/useContactsState";
+import { useMailboxesState } from 'hooks/useMailboxesState';
+import { useMessagesState } from "hooks/useMessagesState";
 import { useToggleState } from "hooks/useToggleState";
 
 const initialState = {
-  mailboxes: [],
-  messages: [],
   currentView: "welcome",
   currentMailbox: null,
   messageID: null,
@@ -38,6 +38,16 @@ const GlobalContextProvider = (props: GlobalContextProviderProps) => {
     add: addContactToList,
   } = useContactsState(null);
 
+  const {
+    state: mailboxes,
+    add: addMailboxToList,
+  } = useMailboxesState(null);
+
+  const {
+    state: messages,
+    add: addMessageToList,
+  } = useMessagesState(null);
+
   return (
     <GlobalContext.Provider
       value={{
@@ -46,7 +56,11 @@ const GlobalContextProvider = (props: GlobalContextProviderProps) => {
         showLoader,
         hideLoader,
         contacts,
-        addContactToList
+        addContactToList,
+        mailboxes,
+        addMailboxToList,
+        messages,
+        addMessageToList,
       }}
     >
       {children}

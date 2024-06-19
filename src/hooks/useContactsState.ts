@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-import { IContact } from "../types/context";
+import { IContact } from "types/context";
 
 export const useContactsState = (contact: IContact | null) => {
   const [state, setState] = useState<IContact[]>([]);
