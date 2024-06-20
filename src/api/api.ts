@@ -4,8 +4,8 @@ import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 const axiosParam = {
   // Set different base URL based on the environment
   baseURL: process.env.NODE_ENV === "development"
-    ? "https://mailbagapi-y3d9xgs0.b4a.run/api"
-    : "https://mailbagapi-y3d9xgs0.b4a.run/api"
+    ? "https://mailbagapi-y3d9xgs0.b4a.run/api/"
+    : process.env.BACKEND_URL
 }
 
 // Create axios instance with default params

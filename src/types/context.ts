@@ -23,7 +23,7 @@ export interface IMessage {
   to?: IAddress[] | null;
   sender?: IAddress[] | null;
   subject: string;
-  body?: string;
+  text?: string;
 }
 
 export type GlobalContextValue = {
