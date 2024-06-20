@@ -1,10 +1,10 @@
 import { GlobalContextProviderProps, GlobalContextValue } from "types/context";
 
 import { createContext } from "react";
-import { useContactsState } from "hooks/useContactsState";
-import { useMailboxesState } from 'hooks/useMailboxesState';
-import { useMessagesState } from "hooks/useMessagesState";
-import { useToggleState } from "hooks/useToggleState";
+import { useContactsState } from "hooks/context/useContactsState";
+import { useMailboxesState } from 'hooks/context/useMailboxesState';
+import { useMessagesState } from "hooks/context/useMessagesState";
+import { useToggleState } from "hooks/context/useToggleState";
 
 const initialState = {
   currentView: "welcome",
