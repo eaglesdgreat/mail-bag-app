@@ -6,10 +6,10 @@ const URLS = {
   mailsUrl: "mailboxes",
 }
 
-export const fetchAllMails = () => {
+export const fetchAllMailboxes = () => {
   return api.get<IMailbox[]>(URLS.mailsUrl)
 }
 
-export const fetchSingleMail = (mailbox: string) => {
+export const fetchMessagesForMailbox = (mailbox: string) => {
   return api.get<IMessage>(URLS.mailsUrl + "/" + mailbox)
 }
